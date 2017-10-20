@@ -193,7 +193,7 @@ function wrapper(plugin_info) {
                     break;
                 case 'JSON':
                     o.push("{");
-                    o.push("\"title\": \"" + name + "\",");
+                    o.push("\"title\": \"" + name.replace(/\"/g, '\\\"') + "\",");
                     o.push("\"guid\": \"" + guid + "\",");
                     o.push("\"latlng\": \"" + latlng + "\"");
                     o.push("},");
